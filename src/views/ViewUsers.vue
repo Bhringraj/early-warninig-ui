@@ -48,15 +48,15 @@
         </thead>
         <tbody class="table-hover">
           <!-- Item -->
-          <!-- <ListItem
+          <ListItem
             v-for="(user, index) in allUsers"
             :key="index"
             :user="user"
             :ind="index"
             @action="doNoth"
             @randomuser="getRandomUser"
-          /> -->
-          <tr v-for="(user, index) in allUsers" :key="index">
+          />
+          <!-- <tr v-for="(user, index) in allUsers" :key="index">
             <td class="fw-bold">
               {{ user.first_name.charAt(0).toUpperCase()
               }}{{ user.first_name.substring(1) }}
@@ -115,7 +115,7 @@
                 </div>
               </div>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
       <div
@@ -163,12 +163,13 @@
 import Service from "@/apis/services";
 import UserModal from "../components/UserModal.vue";
 import Pagination from "../components/Pagination.vue";
-//import ListItem from "../components/ListItem.vue";
+import ListItem from "../components/ListItem.vue";
 
 export default {
   components: {
     Pagination,
     UserModal,
+    ListItem
   },
   data() {
     return {

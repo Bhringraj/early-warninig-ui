@@ -18,7 +18,7 @@
       {{ status(user.is_active) }}
     </td>
     <td>
-      <div class="btn-group">
+      <div class="btn-group dropstart">
         <button
           class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0"
           aria-haspopup="true"
@@ -29,6 +29,7 @@
             ><span class="fas fa-ellipsis-h icon-dark"></span> </span
           ><span class="sr-only">Toggle Dropdown</span>
         </button>
+        
         <div class="dropdown-menu py-0" :class="{ show: showFor }">
           <button class="dropdown-item rounded-top" @click="resetPassword()">
             <span class="fas fa-user-shield me-2"></span> Reset Password
